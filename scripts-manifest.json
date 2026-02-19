@@ -1,91 +1,95 @@
 {
-  "scriptsFolder": "C:\\Users\\ssandesh\\my-efficiency-scripts",
-  "version": "1.0.0",
-  "lastUpdated": "2026-02-11",
-  "scripts": [
-    {
-      "name": "pr-create.cmd",
-      "category": "git",
-      "description": "Creates a GitHub Pull Request from current repository",
-      "usage": "create-pr.cmd",
-      "requiresGitRepo": true,
-      "requiresAuth": true,
-      "interactive": true,
-      "inputs": [
-        {
-          "name": "source_branch",
-          "description": "Source branch for PR (defaults to current branch)",
-          "optional": true
-        },
-        {
-          "name": "destination_branch",
-          "description": "Target branch for PR (defaults to 'dev')",
-          "optional": true
-        },
-        {
-          "name": "pr_title",
-          "description": "PR title (can use latest commit message)",
-          "optional": true
-        }
-      ],
-      "outputs": [
-        "PR URL"
-      ],
-      "prerequisites": [
-        "Git repository",
-        "GitHub CLI (gh) installed",
-        "GitHub token configured in script"
-      ]
-    },
-    {
-      "name": "branch.cmd",
-      "category": "git",
-      "description": "Creates and pushes a new Git branch from specified source",
-      "usage": "create-branch.cmd",
-      "requiresGitRepo": true,
-      "requiresAuth": false,
-      "interactive": true,
-      "inputs": [
-        {
-          "name": "source_branch",
-          "description": "Branch to create from (defaults to 'dev')",
-          "optional": true
-        },
-        {
-          "name": "new_branch_name",
-          "description": "Name for the new branch",
-          "optional": false,
-          "validation": "Must follow Git branch naming conventions"
-        }
-      ],
-      "outputs": [
-        "New branch name",
-        "Confirmation of push to remote"
-      ],
-      "prerequisites": [
-        "Git repository"
-      ]
-    },
-    {
-      "name": "help.cmd",
-      "category": "utility",
-      "description": "Lists all available scripts with descriptions",
-      "usage": "help.cmd",
-      "requiresGitRepo": false,
-      "requiresAuth": false,
-      "interactive": false,
-      "inputs": [],
-      "outputs": [
-        "List of available scripts"
-      ],
-      "prerequisites": []
-    }
-  ],
-  "copilotInstructions": {
-    "howToExecute": "Use the run_in_terminal tool with the script name (e.g., 'create-pr.cmd')",
-    "workingDirectory": "Scripts work on the current working directory's Git repository",
-    "pathLocation": "Scripts are in Windows PATH and can be executed from anywhere",
-    "interactiveScripts": "Most scripts are interactive and will prompt for user input",
-    "errorHandling": "Scripts provide clear visual indicators: [OK] success, [XX] error, [!!] warning, [..] in-progress, [--] cancelled"
-  }
+    "scriptsFolder":  "C:\\Users\\ssandesh\\my-efficiency-scripts",
+    "version":  "1.0.1",
+    "lastUpdated":  "2026-02-11",
+    "scripts":  [
+                    {
+                        "name":  "pr-create.cmd",
+                        "category":  "git",
+                        "description":  "Creates a GitHub Pull Request from current repository",
+                        "usage":  "create-pr.cmd",
+                        "requiresGitRepo":  true,
+                        "requiresAuth":  true,
+                        "interactive":  true,
+                        "inputs":  [
+                                       {
+                                           "name":  "source_branch",
+                                           "description":  "Source branch for PR (defaults to current branch)",
+                                           "optional":  true
+                                       },
+                                       {
+                                           "name":  "destination_branch",
+                                           "description":  "Target branch for PR (defaults to \u0027dev\u0027)",
+                                           "optional":  true
+                                       },
+                                       {
+                                           "name":  "pr_title",
+                                           "description":  "PR title (can use latest commit message)",
+                                           "optional":  true
+                                       }
+                                   ],
+                        "outputs":  [
+                                        "PR URL"
+                                    ],
+                        "prerequisites":  [
+                                              "Git repository",
+                                              "GitHub CLI (gh) installed",
+                                              "GitHub token configured in script"
+                                          ]
+                    },
+                    {
+                        "name":  "branch.cmd",
+                        "category":  "git",
+                        "description":  "Creates and pushes a new Git branch from specified source",
+                        "usage":  "create-branch.cmd",
+                        "requiresGitRepo":  true,
+                        "requiresAuth":  false,
+                        "interactive":  true,
+                        "inputs":  [
+                                       {
+                                           "name":  "source_branch",
+                                           "description":  "Branch to create from (defaults to \u0027dev\u0027)",
+                                           "optional":  true
+                                       },
+                                       {
+                                           "name":  "new_branch_name",
+                                           "description":  "Name for the new branch",
+                                           "optional":  false,
+                                           "validation":  "Must follow Git branch naming conventions"
+                                       }
+                                   ],
+                        "outputs":  [
+                                        "New branch name",
+                                        "Confirmation of push to remote"
+                                    ],
+                        "prerequisites":  [
+                                              "Git repository"
+                                          ]
+                    },
+                    {
+                        "name":  "help.cmd",
+                        "category":  "utility",
+                        "description":  "Lists all available scripts with descriptions",
+                        "usage":  "help.cmd",
+                        "requiresGitRepo":  false,
+                        "requiresAuth":  false,
+                        "interactive":  false,
+                        "inputs":  [
+
+                                   ],
+                        "outputs":  [
+                                        "List of available scripts"
+                                    ],
+                        "prerequisites":  [
+
+                                          ]
+                    }
+                ],
+    "copilotInstructions":  {
+                                "howToExecute":  "Use the run_in_terminal tool with the script name (e.g., \u0027create-pr.cmd\u0027)",
+                                "workingDirectory":  "Scripts work on the current working directory\u0027s Git repository",
+                                "pathLocation":  "Scripts are in Windows PATH and can be executed from anywhere",
+                                "interactiveScripts":  "Most scripts are interactive and will prompt for user input",
+                                "errorHandling":  "Scripts provide clear visual indicators: [OK] success, [XX] error, [!!] warning, [..] in-progress, [--] cancelled"
+                            }
 }
