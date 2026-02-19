@@ -1,1 +1,22 @@
-Hello
+# Secrets and configuration
+.env
+.env.local
+.env.*.local
+
+# Environment-specific files
+*.pem
+*.key
+*.secret
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
